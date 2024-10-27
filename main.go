@@ -1,24 +1,23 @@
 package main
 
 import (
+	"backend/databases"
 	"backend/routes"
-	"database/sql"
 	"log"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	_ "modernc.org/sqlite"
 )
 
 func main() {
 	router := gin.Default()
 	router.Use(cors.Default())
-	// Koneksi ke SQLite
-	db, err := sql.Open("sqlite", "./databases/survey.db")
+
+	db, err := databases.ConnectDB()
 	if err != nil {
 		log.Fatal(err)
 	} else {
-		log.Println("Connected to SQLite")
+		log.Println("Connected to Postgres")
 	}
 	defer db.Close()
 
