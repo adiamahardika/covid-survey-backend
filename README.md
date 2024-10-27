@@ -16,7 +16,7 @@ Pastikan Anda telah menginstal:
 1. Clone repositori ini:
 
    ```sh
-   git clone <URL_REPOSITORY>
+   git clone https://github.com/adiamahardika/covid-survey-backend.git
    cd covid-survey-backend
    ```
 
@@ -39,7 +39,7 @@ Pastikan Anda telah menginstal:
 
 - `main.go`: File utama untuk menjalankan server.
 - `routes/route.go`: File untuk mendefinisikan route API.
-- `databases/`: Direktori untuk menyimpan database SQLite.
+- `databases/`: Direktori untuk menyimpan database SQLite atau membuat koneksi ke database.
 
 ## API Endpoints
 
